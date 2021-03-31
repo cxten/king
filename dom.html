@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="dom.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #dom {
+            position: relative;
+            width: 410px;
+            /* height: 300px; */
+            border: 1px solid #c9c9c9;
+            top: 20px;
+            left: 20px;
+        }
+
+        #small-box {
+            display: block;
+            z-index: 0;
+        }
+
+        #float-box {
+            position: absolute;
+            width: 120px;
+            height: 100px;
+            background-color: rgb(255, 248, 153);
+            opacity: .5;
+            z-index: 1;
+        }
+
+        #mark {
+            width: 410px;
+            height: 270px;
+            position: absolute;
+            background-color: #ffffff;
+            opacity: 0;
+            z-index: 3;
+        }
+
+        #big-box {
+            position: absolute;
+            left: 500px;
+            top: 0;
+            width: 520px;
+            height: 440px;
+            border: 1px solid #c9c9c9;
+            overflow: hidden;
+        }
+
+        #bigimg {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="dom">
+        <div id="small-box">
+            <div id="mark"></div>
+            <div id="float-box"></div>
+            <img src="macbook-small.jpg" alt="">
+        </div>
+        <div id="big-box">
+            <img id="bigimg" src="macbook-big.jpg" alt="">
+        </div>
+    </div> 
+</body>
+</html>
